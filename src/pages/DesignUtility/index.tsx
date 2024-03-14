@@ -1,14 +1,4 @@
-import {
-	Link,
-	HStack,
-	Heading,
-	ListItem,
-	Text,
-	UnorderedList,
-	VStack,
-	Icon,
-	Tooltip,
-} from "@chakra-ui/react";
+import { Link, HStack, Heading, ListItem, Text, UnorderedList, VStack, Icon, Tooltip } from "@chakra-ui/react";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
 import {
 	faGripHorizontal,
@@ -41,11 +31,13 @@ import {
 } from "@chakra-ui/icons";
 import MDEditor from "@uiw/react-md-editor";
 import { useState } from "react";
+import { useDocumentTitle } from "../../hooks";
 
 export default function DesignUtility() {
 	const [mdValue, setMDValue] = useState("");
 
-	// return <>font icon jsonviewer rich-textarea rechart xlsx </>;
+	useDocumentTitle("Design & Utility");
+
 	return (
 		<VStack w="100%" alignItems={"flex-start"} p="100px" spacing={"100px"}>
 			<VStack alignItems={"flex-start"} spacing={4}>
@@ -57,8 +49,8 @@ export default function DesignUtility() {
 								IBM Plex Sans KR
 							</Text>
 							<Text fontFamily={"IBM Plex Sans KR"} ml={4}>
-								Ensuring that the LLM is performant on general tasks is an important
-								part of benchmarking, as this should be an area of strength for LLMs
+								Ensuring that the LLM is performant on general tasks is an important part of
+								benchmarking, as this should be an area of strength for LLMs
 							</Text>
 						</HStack>
 					</ListItem>
@@ -68,8 +60,8 @@ export default function DesignUtility() {
 								Tgothic
 							</Text>
 							<Text fontFamily={"Tgothic"} ml={4}>
-								LLMs have a diverse set of capabilities that lead to good
-								performance in terms of general language skills.
+								LLMs have a diverse set of capabilities that lead to good performance in terms of
+								general language skills.
 							</Text>
 						</HStack>
 					</ListItem>
@@ -79,9 +71,8 @@ export default function DesignUtility() {
 								Pretendard
 							</Text>
 							<Text fontFamily={"Pretendard"} ml={4}>
-								As such, we created benchmarks to test LLMs’ basic abilities on the
-								Korean language, including reading comprehension and meaning based
-								on context.
+								As such, we created benchmarks to test LLMs’ basic abilities on the Korean language,
+								including reading comprehension and meaning based on context.
 							</Text>
 						</HStack>
 					</ListItem>
@@ -91,8 +82,8 @@ export default function DesignUtility() {
 								SUIT
 							</Text>
 							<Text fontFamily={"SUIT"} ml={4}>
-								These tasks are important when benchmarking an LLM, but as a Telco,
-								we put more effort into designing Telco-specific tasks.
+								These tasks are important when benchmarking an LLM, but as a Telco, we put more effort
+								into designing Telco-specific tasks.
 							</Text>
 						</HStack>
 					</ListItem>
@@ -191,8 +182,7 @@ export default function DesignUtility() {
 								<FontAwesomeIcon icon={faLink} />
 							</Link>
 							<Text fontFamily={"IBM Plex Sans KR"} ml={4}>
-								텍스트 입력시 다양한 효과 적용이 가능하며, Playground - /Completions
-								호출 결과에 활용
+								텍스트 입력시 다양한 효과 적용이 가능하며, Playground - /Completions 호출 결과에 활용
 							</Text>
 						</HStack>
 					</ListItem>

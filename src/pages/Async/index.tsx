@@ -1,28 +1,12 @@
-import {
-	HStack,
-	Heading,
-	IconButton,
-	Image,
-	Skeleton,
-	Table,
-	TableContainer,
-	Tbody,
-	Td,
-	Text,
-	Th,
-	Thead,
-	Tr,
-	VStack,
-} from "@chakra-ui/react";
+import { HStack, Heading, IconButton, Image, Skeleton, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr, VStack } from "@chakra-ui/react";
 import useSWR from "swr";
 import useSWRMutation from "swr/mutation";
 import axios from "axios";
 import dayjs from "dayjs";
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { useToast } from "@chakra-ui/react";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GoogleLogin, GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
 
 export function sleep(ms: number) {
 	return new Promise((resolve) => setTimeout(resolve, ms));
@@ -98,19 +82,13 @@ function UsersTable() {
 									<Tr key={item.id}>
 										<Td>
 											<HStack>
-												<Image
-													w="20px"
-													h="20px"
-													src={item.image}
-													display={"inline-block"}
-												/>
+												<Image w="20px" h="20px" src={item.image} display={"inline-block"} />
 												<Text>{item.username}</Text>
 											</HStack>
 										</Td>
 										<Td>{item.age}</Td>
 										<Td>
-											{item.birthDate} (
-											{dayjs(item.birthDate).format("MMM/DD")})
+											{item.birthDate} ({dayjs(item.birthDate).format("MMM/DD")})
 										</Td>
 										<Td>{item.gender}</Td>
 										<Td>{item.university}</Td>
@@ -146,20 +124,13 @@ function ProductsTable() {
 		},
 	});
 
-	const list = useMemo(
-		() => (data?.data?.products || []).slice(-5) as ProductDefinition[],
-		[data]
-	);
+	const list = useMemo(() => (data?.data?.products || []).slice(-5) as ProductDefinition[], [data]);
 
 	return (
 		<VStack w="100%" alignItems={"flex-start"}>
 			<HStack>
 				<Heading as="h3">Tables</Heading>
-				<IconButton
-					aria-label="reload"
-					icon={<FontAwesomeIcon icon={faRotate} />}
-					onClick={() => trigger()}
-				/>
+				<IconButton aria-label="reload" icon={<FontAwesomeIcon icon={faRotate} />} onClick={() => trigger()} />
 			</HStack>
 			<TableContainer w="100%">
 				<Table
@@ -189,11 +160,7 @@ function ProductsTable() {
 											<Text>{item.title}</Text>
 										</Td>
 										<Td>{item.brand}</Td>
-										<Td
-											whiteSpace={"nowrap"}
-											overflow={"hidden"}
-											textOverflow={"ellipsis"}
-										>
+										<Td whiteSpace={"nowrap"} overflow={"hidden"} textOverflow={"ellipsis"}>
 											{item.description}
 										</Td>
 										<Td>${item.price}</Td>

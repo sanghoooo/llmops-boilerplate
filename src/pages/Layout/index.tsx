@@ -1,17 +1,7 @@
-import {
-	Box,
-	Button,
-	HStack,
-	Heading,
-	ListItem,
-	Text,
-	UnorderedList,
-	VStack,
-} from "@chakra-ui/react";
+import { Box, Button, HStack, Heading, ListItem, Text, UnorderedList, VStack } from "@chakra-ui/react";
 import Header from "./Header";
 import { useState } from "react";
 import { useDocumentTitle } from "../../hooks";
-import { version } from "../../../package.json";
 
 export default function Layout() {
 	const [colored, setColored] = useState(false);
@@ -32,12 +22,7 @@ export default function Layout() {
 				height={`calc(100vh - ${80}px)`}
 				marginTop={"80px"} // header 높이
 			>
-				<VStack
-					height={"100%"}
-					width={"250px"}
-					background={colored ? "teal.300" : undefined}
-					paddingTop={"50px"}
-				>
+				<VStack height={"100%"} width={"250px"} background={colored ? "teal.300" : undefined} paddingTop={"50px"}>
 					<Button marginBottom="40px" onClick={() => setColored(!colored)}>
 						Toggle Bg
 					</Button>
@@ -48,34 +33,24 @@ export default function Layout() {
 					</UnorderedList>
 				</VStack>
 				<Box width={"100%"} height={"100%"} padding={"100px"}>
-					<Box
-						width={"inherit"}
-						height={"inherit"}
-						background={colored ? "teal.300" : undefined}
-					>
+					<Box width={"inherit"} height={"inherit"} background={colored ? "teal.300" : undefined}>
 						<Heading marginBottom="20px" whiteSpace={"pre-wrap"}>
 							{"Unlocking Insights:\nTelBench's Role in Advancing Telecommunications"}
 						</Heading>
 						<Text>
-							Benchmarking the performance of the Telco LLM that is tuned with
-							well-designed data is a key element in the development of the Telco LLM.
-							SKT's AI Tech Collaboration Group comprehensively measures the
-							performance of LLMs on a battery of tasks, ranging from general tasks
-							that measure the reasoning ability or language ability of general models
-							to telco-specific tasks that measure the ability to perform tasks
-							specialized to the telco domain. SKT’s team of fantastic linguists
+							Benchmarking the performance of the Telco LLM that is tuned with well-designed data is a key element in the development of
+							the Telco LLM. SKT's AI Tech Collaboration Group comprehensively measures the performance of LLMs on a battery of tasks,
+							ranging from general tasks that measure the reasoning ability or language ability of general models to telco-specific
+							tasks that measure the ability to perform tasks specialized to the telco domain. SKT’s team of fantastic linguists
 							designed the tasks and the benchmark data.
 							<br />
 							<br />
-							Benchmarking is performed at regular intervals, and from each round of
-							benchmarking, we are able to glean key insights into each LLM. When we
-							benchmark, we can closely examine areas of strength for an LLM, as well
-							as areas that need improvement. We can also objectively measure
-							performance of an LLM by comparing it with other models. These carefully
-							designed benchmarks take into account not only LLM capability but also
-							business perspectives. The business perspective is particularly
-							important, as it’s a measure of how useful and effective the LLM will be
-							when deployed in an actual business use case.
+							Benchmarking is performed at regular intervals, and from each round of benchmarking, we are able to glean key insights
+							into each LLM. When we benchmark, we can closely examine areas of strength for an LLM, as well as areas that need
+							improvement. We can also objectively measure performance of an LLM by comparing it with other models. These carefully
+							designed benchmarks take into account not only LLM capability but also business perspectives. The business perspective is
+							particularly important, as it’s a measure of how useful and effective the LLM will be when deployed in an actual business
+							use case.
 						</Text>
 					</Box>
 				</Box>

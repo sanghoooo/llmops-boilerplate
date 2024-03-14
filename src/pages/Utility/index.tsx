@@ -1,28 +1,5 @@
-import {
-	HStack,
-	Heading,
-	IconButton,
-	Image,
-	Skeleton,
-	Table,
-	TableContainer,
-	Tbody,
-	Td,
-	Text,
-	Th,
-	Thead,
-	Tr,
-	VStack,
-} from "@chakra-ui/react";
-import useSWR from "swr";
-import useSWRMutation from "swr/mutation";
-import axios from "axios";
-import dayjs from "dayjs";
-import { useMemo, useState } from "react";
-import { useToast } from "@chakra-ui/react";
-import { faRotate } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GoogleLogin, GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
+import { Heading, VStack } from "@chakra-ui/react";
+import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 
 function Login() {
 	return (

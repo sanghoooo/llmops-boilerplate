@@ -19,7 +19,7 @@ function Login() {
 
 export default function Utility() {
 	return (
-		<GoogleOAuthProvider clientId={""}>
+		<GoogleOAuthProvider clientId={"1053796626890-ej1e0jh4ro1npjcdphf53ubbdekr004o.apps.googleusercontent.com"}>
 			<VStack w="100%" alignItems={"flex-start"} p="100px" spacing={"100px"}>
 				<Login />
 			</VStack>

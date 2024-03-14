@@ -21,3 +21,19 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@keyframes hue-rotation {
+	0% {
+		filter: hue-rotate(calc(360deg / 6 * 0))
+	}
+
+	50% {
+		filter: hue-rotate(calc(360deg / 6 * 5))
+
+	}
+
+	100% {
+		filter: hue-rotate(calc(360deg / 6 * 0))
+
+	}
+}

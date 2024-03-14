@@ -1,7 +1,8 @@
 ## 1. 시작
 
 -   Tech Stack
-	-   [React](https://react.dev)
+
+    -   [React](https://react.dev)
     -   [Typescript](https://www.typescriptlang.org)
     -   [Vite](https://vitejs.dev) 빌드 툴
     -   [Chakra UI](https://chakra-ui.com) UI 라이브러리
@@ -20,16 +21,19 @@
 ## 2. 필수 라이브러리 세팅
 
 1. ### Chakra UI
+
     - 디자인된 각종 컴포넌트 제공
     - [https://chakra-ui.com/getting-started](url)
     - `$ yarn add @chakra-ui/react @emotion/react @emotion/styled framer-motion`
 
 2. ### Recoil
+
     - 전역 상태 관리
     - [https://app.sideguide.dev/recoil/tutorial](url)
     - `$ yarn add recoil`
 
 3. ### React Router
+
     - 페이지 라우팅, SPA 구현
     - [https://reactrouter.com/en/main/start/tutorial](url)
     - `$ yarn add react-router-dom localforage match-sorter sort-by`
@@ -132,33 +136,3 @@ function LangaugeSelector() {
 }
 
 ```
-
-https://react.dev
-https://vitejs.dev
-https://www.typescriptlang.org
-https://react.dev/learn/writing-markup-with-jsx
-
-https://reactrouter.com/en/main
-[https://recoiljs.org](url)
-https://axios-http.com
-[https://swr.vercel.app/ko](url)
-
-https://chakra-ui.com
-https://fontawesome.com
-https://sass-lang.com
-https://www.ibm.com/plex/
-
-https://remarkjs.github.io/react-markdown/
-https://github.com/mac-s-g/react-json-view
-
-https://react-oauth.vercel.app
-https://react.i18next.com
-https://day.js.org
-
-glm-admin-web
-
--   인증 쿠키 활용
-
-llm-assistant
-
-src / public

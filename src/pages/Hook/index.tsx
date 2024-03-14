@@ -1,26 +1,8 @@
-import {
-	Button,
-	ButtonGroup,
-	Grid,
-	GridItem,
-	HStack,
-	Heading,
-	IconButton,
-	ListItem,
-	Text,
-	UnorderedList,
-	VStack,
-} from "@chakra-ui/react";
+import { Button, ButtonGroup, Divider, Grid, GridItem, HStack, Heading, IconButton, ListItem, Text, UnorderedList, VStack } from "@chakra-ui/react";
 import { faDownLong, faRotate, faUpLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactNode, createContext, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import {
-	ChildComponent,
-	ChildHasChildWithContext,
-	ChildHasChildWithProps,
-	ChildWithContext,
-	ChildWithProps,
-} from "./Child";
+import { ChildComponent, ChildHasChildWithContext, ChildHasChildWithProps, ChildWithContext, ChildWithProps } from "./Child";
 import { random } from "lodash";
 import { useDocumentTitle, usePreventUnload, useStickyState } from "../../hooks/index";
 import { useOutsideClick } from "@chakra-ui/react";
@@ -102,11 +84,7 @@ export default function Hook() {
 							count: {count}
 						</Text>
 						<ButtonGroup>
-							<IconButton
-								onClick={() => setCount(count + 1)}
-								aria-label="up"
-								icon={<FontAwesomeIcon icon={faUpLong} />}
-							/>
+							<IconButton onClick={() => setCount(count + 1)} aria-label="up" icon={<FontAwesomeIcon icon={faUpLong} />} />
 							<IconButton
 								onClick={() => {
 									count = count - 1;
@@ -145,9 +123,7 @@ export default function Hook() {
 					<VStack>
 						<Heading as="h3">useCallback</Heading>
 						<HStack>
-							<Button onClick={alertCount}>
-								Alert when the value of count is odd
-							</Button>
+							<Button onClick={alertCount}>Alert when the value of count is odd</Button>
 						</HStack>
 					</VStack>
 					<VStack>
@@ -186,11 +162,7 @@ export default function Hook() {
 				</GridItemVStack>
 				<GridItemVStack>
 					<Heading as="h3">useImperativeHandle</Heading>
-					<Button
-						size="sm"
-						variant={"link"}
-						onClick={() => window.open(useImperativeHandleLink)}
-					>
+					<Button size="sm" variant={"link"} onClick={() => window.open(useImperativeHandleLink)}>
 						{useImperativeHandleLink}
 					</Button>
 					<VStack w="300px" mt={2} padding={2} border="1px solid" borderRadius={"4px"}>
@@ -202,7 +174,7 @@ export default function Hook() {
 					</Button>
 				</GridItemVStack>
 			</GridBox>
-			<hr />
+			<Divider />
 			<GridBox>
 				<GridItemVStack>
 					<Heading as="h3">useStickyState</Heading>
@@ -211,11 +183,7 @@ export default function Hook() {
 							sticky: {sticky}
 						</Text>
 						<ButtonGroup>
-							<IconButton
-								onClick={() => setSticky(random(30, 39))}
-								aria-label="up"
-								icon={<FontAwesomeIcon icon={faRotate} />}
-							/>
+							<IconButton onClick={() => setSticky(random(30, 39))} aria-label="up" icon={<FontAwesomeIcon icon={faRotate} />} />
 						</ButtonGroup>
 					</HStack>
 				</GridItemVStack>
@@ -247,14 +215,7 @@ export default function Hook() {
 				</GridItemVStack>
 				<GridItemVStack>
 					<Heading as="h3">useOutsideClick</Heading>
-					<VStack
-						w="300px"
-						mt={2}
-						padding={2}
-						border={`1px ${clickable ? "solid" : "dashed"}`}
-						borderRadius={"4px"}
-						ref={insideRef}
-					>
+					<VStack w="300px" mt={2} padding={2} border={`1px ${clickable ? "solid" : "dashed"}`} borderRadius={"4px"} ref={insideRef}>
 						<Text fontWeight={700}>Inside</Text>
 						<HStack>
 							<Text>Ouside is {clickable ? "clickable" : "blocked"}</Text>

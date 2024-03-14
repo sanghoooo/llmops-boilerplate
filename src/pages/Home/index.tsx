@@ -18,8 +18,7 @@ export default function Home() {
 				<Button onClick={() => navigate("/layout")}>Layout</Button>
 				<Button onClick={() => navigate("/hook")}>Hook</Button>
 				<Button onClick={() => navigate("/async")}>Async</Button>
-				<Button onClick={() => navigate("/design")}>Design</Button>
-				<Button onClick={() => navigate("/utility")}>Utility</Button>
+				<Button onClick={() => navigate("/design-utility")}>Design & Utility</Button>
 			</HStack>
 		</VStack>
 	);

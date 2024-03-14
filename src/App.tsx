@@ -8,8 +8,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Hook from "./pages/Hook";
 import Async from "./pages/Async";
-import Design from "./pages/Design";
-import Utility from "./pages/Utility";
+import DesignUtility from "./pages/DesignUtility";
 
 // 다국어 지원 라이브러리 init
 i18n.use(initReactI18next).init({
@@ -63,12 +62,8 @@ export default function App() {
 								element: <Async />,
 							},
 							{
-								path: "/design",
-								element: <Design />,
-							},
-							{
-								path: "/utility",
-								element: <Utility />,
+								path: "/design-utility",
+								element: <DesignUtility />,
 							},
 						])}
 					/>
